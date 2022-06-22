@@ -6,3 +6,6 @@ Download ***display_ui.js*** for either orientation.
 It changes the default progress time bar color.
 
 Additionally download ***display_ui.html*** file from the respective branch to match the orientation you desire.
+
+![image](https://user-images.githubusercontent.com/108012806/175085703-bbf61a4c-5e51-4df8-b816-2afc433ca4e7.png)
+
