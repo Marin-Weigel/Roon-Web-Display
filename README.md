@@ -1,2 +1,2 @@
 # Roon-Web-Display
-Custom html for landscape presentation.
+Custom html for landscape orientation.
