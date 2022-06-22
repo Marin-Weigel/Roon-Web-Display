@@ -42,7 +42,7 @@
     z-index: 0;
     opacity: 0.75;
     width: 100%;
-    height: 100%;
+    height: 80%;
     overflow: hidden;
 }
 
@@ -72,6 +72,12 @@
     opacity: 0;
 }
 
+#background-footer {
+    background: #2C2C2E;
+    opacity: 0.25;
+    height: 43.7%;
+}
+
 #background-split {
     display: flex;
     flex-direction: column;
@@ -87,9 +93,9 @@
 #lyricscontainer {
     opacity: 0;
     z-index: 3;
-    width: 990px;
-    height: 540px;
-    position: left;
+    width: 100%;
+    height: 56.3%;
+    position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
@@ -101,18 +107,73 @@
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
-    width: 990px;
-    height: 0%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-#lyricstextcontainer {
-    background-color: black;
+#lyricscountdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0;
+    text-align: center;
+    font-size: 4vw;
+    font-family: "Lato", "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", sans-serif;
+    font-weight: bold;
+    transition: opacity 0.7s linear;
+    will-change: opacity;
+}
+
+#lyricscountdown > * {
+    margin: 1.4vw;
+}
+
+#lyricscountdown > span {
+    color: white;
+    opacity: 0.4;
+    transition: opacity 0.2s linear;
+    will-change: opacity;
+}
+
+#lyricscountdown > span.active {
     opacity: 0.75;
+}
+
+#lyricscountdown.reducedAnimation > span {
+    transition: none;
+}
+
+#lyricscountdownicon {
+    height: 2.5vw;
+    width: 2.5vw;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+#lyricsicon {
+    opacity: 0;
+    height: 2.8vh;
+    width: 2.8vh;
+    z-index: 3;
+    position: absolute;
+    right: 50%;
+    bottom: 8%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    transition: opacity 1s linear;
+}
+
+#lyricstextcontainer {
+    background-color: transparent;
+    opacity: 1;
     z-index: 2;
-    width: 990px;
+    width: 100%;
     height: 100%;
     position: absolute;
     -webkit-mask-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 5%, rgba(0,0,0,1) 45%, rgba(0,0,0,1) 55%, rgba(0,0,0,0.00) 85%);
@@ -125,15 +186,15 @@
 }
 
 .lyricstext {
-    width: 990px;
+    width: 98%;
     position: absolute;
-    top: 75vh;											
+    top: 56vh;
     margin: 0px;
     padding: 0px;
     color: white;
-    font-size: 2.1vw;
+    font-size: 4.4vw;
     font-family: "Lato", "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", sans-serif;
-    line-height: 125%;
+    line-height: 150%;
     font-weight: bold;
     text-align: center;
     user-select: none;
@@ -145,7 +206,7 @@
 
 .lyricstext > * {
     opacity: 0.5;
-    padding: 10px;
+    padding: 0px;
     margin: 1vw 0px 1vw 0px;
     transition: transform 0.7s linear, opacity 0.7s linear;
     will-change: opacity;
@@ -162,7 +223,7 @@
 }
 
 #lyricstextcontainer.reducedAnimation .lyricstext > .current {
-    opacity: 0;
+    opacity: 0.5;
 }
 
 .lyricstext > .prevnext {
@@ -176,7 +237,7 @@
 #albumart {
     background-color: transparent;
     z-index: 1;
-    width: 990px;
+    width: 100%;
     height: 100%;
     left: 0%;
     bottom: 0%;
@@ -187,8 +248,8 @@
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center left;
-    width: 990px;
+    background-position: center top;
+    width: 100%;
     height: 100%;
     top: 0;
     left: 0;
@@ -205,10 +266,10 @@
 #infocontainer {
     position: absolute;
     z-index: 4;
-    top: 0%;
-    left: 990px;
-    bottom: 0%;
-    right: 0%;
+    top: 57%;
+    left: 1%;
+    bottom: 1%;
+    right: 1%;
 }
 
 .linecontainer {
@@ -232,12 +293,12 @@
     -moz-user-select: none;
     display: compact; 
     position: absolute;
-    width: 98%;
+    width: 100%;
     transition: opacity 1s ease-out;
 }
 
 #line1container {
-    height: 40vh;
+    height: 24vh;
     top: 0%;
     color: white;
 	display: flex;
@@ -246,8 +307,8 @@
 }
 
 #line2container {
-    height: 40vh;
-    top: 40%;
+    height: 20vh;
+    top: 45%;
     color: silver;
 	display: flex;
 	justify-content: center;
@@ -256,33 +317,34 @@
 
 #line1container span {
     box-sizing: content-box;
-    font-size: 6vh;
+    font-size: 3.5vh;
     font-weight: bold;
 }
 
 #line2container span {
-    font-size: 6vh;
+    font-size: 3.5vh;
     font-weight: bold;
 }
 
 #progresstimecontainer {
-    height: 22vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 1%;
+    vertical-align: center;
     align-items: center;
     position: absolute;
-    top: 78%;
-    left: 1%;
-    width: 98%;
+    top: 87%;
+    left: 0;
+    width: 100%;
 }
 
 .progresstime {
     font-family: "Lato", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", sans-serif;
     font-weight: normal;
+    vertical-align: center;
     color: white;
-    font-size: 3vh;
+    font-size: 2vh;
     display: contents;
     width: 5%;
     box-sizing: border-box;
@@ -298,7 +360,7 @@
 
 #progressbg {
     background-color: grey;
-	left: 0px;
+    left: 0px;
     width: 100%;
     height: 0.83vh;
     border-radius: 0.28vh;
@@ -317,8 +379,9 @@
 
 #waveformcontainer {
     position: relative;
+    bottom: 0vh;
     width: 99%;
-    height: 22vh;
+    height: 6vh;
     opacity: 0;
     transition: opacity 1s linear;
 }
@@ -387,6 +450,12 @@
 <div id="lyricscontainer">
     <div id="background-lyrics">
         <div style="flex-grow: 1;"></div>
+        <div id="lyricscountdown">
+            <span>3</span>
+            <span>2</span>
+            <span>1</span>
+        </div>
+        <div style="flex-grow: 1;"></div>
     </div>
     <div id="lyricstextcontainer" class="reducedAlphaAvailable reducedAnimationAvailable">
     </div>
@@ -400,6 +469,7 @@
         <span class="back"></span>
         <span class="front"></span>
     </div>
+    <div id="infoicon"></div>
     <div id="progresstimecontainer" style="display: flex; flex-direction: row;">
         <p id="progresstime" class="progresstime"></p>
         <div id="progressbg">
@@ -413,7 +483,9 @@
         </div>
         <p id="totaltime" class="progresstime"></p>
     </div>
+
 </div>
+<div id="lyricsicon" class="lyricsicon"></div>
 <div id="albumart" class="reducedAlphaAvailable">
     <div class="back"></div>
     <div class="front"></div>
