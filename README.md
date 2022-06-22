@@ -1,4 +1,7 @@
 # Roon-Web-Display
 Custom html for either portrait or landscape presentation.
 
-The .js file is changes the default progress time bar and is used for both landscape and portrait versions.
+Download this .js for either orientation.
+It changes the default progress time bar color.
+
+Additionally download the respective .html for the orientation you desire.
