@@ -3,7 +3,7 @@ Custom html to use in full-screen mode for screens only with 1920 x 1080 resolut
 
 Download ***display_ui.js*** for either orientation.
 
-It changes the default progress time bar color.
+It's used only to change the default progress time bar color.
 
 Additionally download ***display_ui.html*** file from the respective branch to match the orientation you desire.
 
