@@ -1,5 +1,5 @@
 # Roon-Web-Display
-Custom html to use in full-screen mode for screens only with 1920 x 1080 resolution in portrait or landscape orientation.
+Customizations for use with 1920 x 1080 full-screen mode in portrait or landscape orientation.
 
 Download ***display_ui.js*** for either orientation.
 
