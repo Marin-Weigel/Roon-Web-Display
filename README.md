@@ -1,2 +1,2 @@
 # Roon-Web-Display
-Custom .html for portrait orientation.
+Custom html for portrait orientation.
